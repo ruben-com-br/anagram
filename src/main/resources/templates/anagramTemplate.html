@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Anagramas</title>
+</head>
+<body>
+<h1>Lista de Anagramas</h1>
+
+<!-- Mensagem de erro -->
+<p th:if="${error}" th:text="${error}" style="color: red; font-weight: bold;"></p>
+
+<!-- Lista de anagramas -->
+<ul>
+    <li th:each="anagram : ${anagrams}" th:text="${anagram}"></li>
+</ul>
+</body>
+</html>
